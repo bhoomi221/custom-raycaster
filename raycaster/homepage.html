@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Welcome</title>
+    <div style="text-align: center;" id="text">
+        <h1>Welcome</h1>
+    <p>Pick the size of the map using the slider, then click on the cells to create a map.</p>
+</head>
+<body>
+    <div>
+        <span>Map Size:</span>
+        <span id="val"></span>
+       <input type="range" id="grid" name="grid" min="8" max="24">
+       <script>
+           var mapVal = document.getElementById('grid'); 
+           var setVal = document.getElementById('val')
+           setVal.innerHTML = mapVal.value; 
+           mapVal.oninput = function () {
+               setVal.innerHTML = this.value;
+           }
+       </script>
+    </div>
+    <button id='start'>
+        start
+    </button>
+    </div>
+   
+    <table style="text-align: center;" id="t1"> </table>
+   
+    <script src="canvas.js"></script>
+</body>
+</html>
